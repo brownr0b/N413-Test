@@ -1,0 +1,17 @@
+textarea {
+    resize: none;
+}
+
+.row{
+    margin: 5px 0 !important;
+}
+
+.tt-suggestion{
+    background-color: white;
+    cursor:pointer;
+    padding: 5px 10px;
+}
+
+.tt-suggestion:hover{
+    background-color: rgba(0,0,0,0.1);
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+  padding-top: 90px;
+}
+
+.student {
+	margin-top:0.3em;
+	margin-bottom:0.3em;
+	width:200px;
+	cursor:hand;
+	cursor:pointer;
+	border:solid 1px #000;
+	border-radius:3px;
+	background-color:#f4f4f4;
+}
+
+.present-student {
+	margin-top:0.3em;
+	margin-bottom:0.3em;
+	width:200px;
+	border:solid 1px #000;
+	border-radius:3px;
+	background-color:#f4f4f4;
+}
+
+.present-student:hover,
+.student:hover{
+	background-color:#ffffff;
+}

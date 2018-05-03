@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400" rel="stylesheet">
+    <link rel="stylesheet" href="css/city.css">
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <div id="nav-left">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+                <form class="form" method="get" action="city.html">
+                    <input type="text" id="place" placeholder="Search City or Zip" name="q" required>
+                    <button type="submit" id="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div id="nav-right">
+                <a href="#">Register</a>
+                <a href="#">Login</a>
+            </div>
+        </nav>
+        <div id="result"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/fontawesome-all.js"></script>
+    <script>
+        var query = window.location.search.substring(3);
+        query = query.replace("+", " ");
+
+        function titleCase(str) {
+            var query = str.toLowerCase().split(' ');
+            for (var i = 0; i < query.length; i++) {
+                // You do not need to check if i is larger than splitStr length, as your for does that for you
+                // Assign it back to the array
+                query[i] = query[i].charAt(0).toUpperCase() + query[i].substring(1);
+            }
+            // Directly return the joined string
+            return query.join(' ');
+        }
+
+        document.title = titleCase(query) + " Weather Forecast & Conditions";
+
+        if(query === ""){
+            window.location.replace("index.html");
+        }
+    </script>
+    <script src="js/app2.js"></script>
+</body>
+</html>

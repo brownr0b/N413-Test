@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/n413_contact.css" rel="stylesheet">
+		<script src="js/jquery-1.11.3.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <title>Contact Form</title>
+    </head>
+    
+    <body>
+    	<!-- BEGIN Bootstrap Navbar -->
+    	<nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header"><!-- Mobile menu code -->
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">N413 Contact</a>
+            </div> <!-- /.navbar-header -->
+            <div id="navbar" class="collapse navbar-collapse">  <!-- Full-width menu code -->
+              <ul class="nav navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li class="active"><a href="#contact">Contact</a></li>
+              </ul>
+            </div><!--/.collapse navbar-collapse -->
+          </div><!--/.container -->
+        </nav>
+        <!-- END Bootstrap Navbar -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12"> <!-- column for headline -->
+				<h3 style="text-align:center;">N413 Contact Form</h3>
+            </div> <!-- /col-xs-12 -->
+          </div> <!-- /.row  -->
+		  <form id="n413_contact_form" class="form-horizontal" method="post" action="get_contacts.php">
+        	<div class="row">
+                <div class="col-xs-12">
+                    <div class="row" style="padding:2em;">
+                      <div class="form-group">
+                        <div class="col-xs-2">
+                          <input type="text" class="form-control" name = "first_name" id="first_name" placeholder="First Name" required>
+                        </div> <!--  /.col-xs-3  -->
+                        <div class="col-xs-2">
+                            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" required>
+                        </div> <!--  /.col-xs-3  -->
+                      </div> <!--  /.form-group  -->
+
+                      <div class="form-group">
+                        <div class="col-xs-4">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="E-mail" required>
+                        </div> <!--  /.col-xs-3  -->
+                      </div> <!--  /.form-group  -->
+
+                      <div class="form-group">
+                        <div class="col-xs-4">
+                            <textarea class="form-control" name="comment" id="comment" placeholder="Comments..." style="height:150px;"></textarea>
+                        </div> <!--  /.col-xs-6  -->
+                      </div> <!--  /.form-group  -->
+                    </div>  <!-- /.row -->
+
+                    <div class="row row-gap">
+                      <div class="col-xs-8">
+                        <button type="submit" class="btn btn-success pull-right">Submit</button>
+                        <input type="reset" class="btn btn-default pull-right" value="Reset">
+                      </div>  <!-- /.col-xs-9 (BUTTON) -->
+                    </div> <!-- /.row row-gap  -->
+                  </div> <!-- /col-xs-12 -->
+                </div> <!-- /.row -->
+            </div>
+          </form>
+    	</div>  <!-- /.container-fluid -->
+    </body>
+</html>
